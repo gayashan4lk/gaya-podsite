@@ -102,11 +102,11 @@ statement, and a "Browse Episodes" CTA link. No other pages required.
 
 **Purpose**: 404 page, accessibility pass, progressive enhancement verification, and final smoke test.
 
-- [ ] T020 Create `frontend/src/app/not-found.tsx`: friendly "Page Not Found" message, link back to `/`; styled consistently with the site
-- [ ] T021 [P] Accessibility audit: verify all images across `EpisodeCard`, `FeaturedEpisode` have descriptive `alt` text; verify all interactive elements (`<audio>`, nav links, CTA buttons) are keyboard-focusable; fix any issues found
-- [ ] T022 [P] Progressive enhancement check: disable JavaScript in browser DevTools and verify Home (`/`), Episodes (`/episodes`), and About (`/about`) still render meaningful content (episode list, podcast info)
-- [ ] T023 Run full manual smoke test checklist from `specs/001-podcast-website/quickstart.md` against dev server (`npm run dev`)
-- [ ] T024 Run `npm run build` and verify static export to `out/` completes without errors; run `npx serve out` and re-run smoke test checklist against static build
+- [x] T020 Create `frontend/src/app/not-found.tsx`: friendly "Page Not Found" message, link back to `/`; styled consistently with the site
+- [x] T021 [P] Accessibility audit: verify all images across `EpisodeCard`, `FeaturedEpisode` have descriptive `alt` text; verify all interactive elements (`<audio>`, nav links, CTA buttons) are keyboard-focusable; fix any issues found
+- [x] T022 [P] Progressive enhancement check: disable JavaScript in browser DevTools and verify Home (`/`), Episodes (`/episodes`), and About (`/about`) still render meaningful content (episode list, podcast info)
+- [x] T023 Run full manual smoke test checklist from `specs/001-podcast-website/quickstart.md` against dev server (`npm run dev`)
+- [x] T024 Run `npm run build` and verify static export to `out/` completes without errors; run `npx serve out` and re-run smoke test checklist against static build
 
 ---
 
