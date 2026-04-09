@@ -91,8 +91,8 @@ statement, and a "Browse Episodes" CTA link. No other pages required.
 
 ### Implementation for User Story 3
 
-- [ ] T018 [US3] Create `frontend/src/app/about/page.tsx`: import `podcast`; render podcast name, description, missionStatement, hostName, hostBio; include a "Browse Episodes" CTA button linking to `/episodes`
-- [ ] T019 [US3] Style the About page in `frontend/src/app/about/page.tsx` using Tailwind: readable prose layout, host section with name prominently displayed, CTA button styled consistently with the rest of the site; mobile-first responsive
+- [x] T018 [US3] Create `frontend/src/app/about/page.tsx`: import `podcast`; render podcast name, description, missionStatement, hostName, hostBio; include a "Browse Episodes" CTA button linking to `/episodes`
+- [x] T019 [US3] Style the About page in `frontend/src/app/about/page.tsx` using Tailwind: readable prose layout, host section with name prominently displayed, CTA button styled consistently with the rest of the site; mobile-first responsive
 
 **Checkpoint**: About page (`/about`) renders all podcast and host info; CTA links to `/episodes`. Readable on 375 px viewport.
 
