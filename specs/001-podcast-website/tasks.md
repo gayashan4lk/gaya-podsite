@@ -37,11 +37,11 @@ description: "Task list for Podcast Website implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T006 Create `frontend/src/data/podcast.ts` exporting a `podcast` constant of type `Podcast` with: name, tagline, description (multi-sentence), hostName, hostBio (2–4 sentences), missionStatement, coverImageUrl (`https://picsum.photos/seed/podcast/600/600`)
-- [ ] T007 Create `frontend/src/data/episodes.ts` exporting an `episodes` array of 20 `Episode` objects ordered newest-first (episode 20 first). Each episode must have: id, episodeNumber, title, description, snippet (≤150 chars), publicationDate (YYYY-MM-DD, spanning Sep 2024–Apr 2026), durationMinutes (28–65 range, varied), coverImageUrl (`https://picsum.photos/seed/ep{N}/400/400`), audioUrl (`"#"`). Topics should vary (tech, creativity, entrepreneurship, design).
-- [ ] T008 Create `frontend/src/app/layout.tsx` as root layout: `<html lang="en">`, viewport meta, site title using `podcast.name`, render `<Header>` and `<Footer>` around `{children}`
-- [ ] T009 [P] Create `frontend/src/components/Header.tsx` as a React Server Component: podcast name/logo on the left, navigation links (Home `/`, Episodes `/episodes`, About `/about`) on the right; mobile-responsive hamburger or stacked nav
-- [ ] T010 [P] Create `frontend/src/components/Footer.tsx` as a React Server Component: copyright line with podcast name and current year; minimal styling
+- [x] T006 Create `frontend/src/data/podcast.ts` exporting a `podcast` constant of type `Podcast` with: name, tagline, description (multi-sentence), hostName, hostBio (2–4 sentences), missionStatement, coverImageUrl (`https://picsum.photos/seed/podcast/600/600`)
+- [x] T007 Create `frontend/src/data/episodes.ts` exporting an `episodes` array of 20 `Episode` objects ordered newest-first (episode 20 first). Each episode must have: id, episodeNumber, title, description, snippet (≤150 chars), publicationDate (YYYY-MM-DD, spanning Sep 2024–Apr 2026), durationMinutes (28–65 range, varied), coverImageUrl (`https://picsum.photos/seed/ep{N}/400/400`), audioUrl (`"#"`). Topics should vary (tech, creativity, entrepreneurship, design).
+- [x] T008 Create `frontend/src/app/layout.tsx` as root layout: `<html lang="en">`, viewport meta, site title using `podcast.name`, render `<Header>` and `<Footer>` around `{children}`
+- [x] T009 [P] Create `frontend/src/components/Header.tsx` as a React Server Component: podcast name/logo on the left, navigation links (Home `/`, Episodes `/episodes`, About `/about`) on the right; mobile-responsive hamburger or stacked nav
+- [x] T010 [P] Create `frontend/src/components/Footer.tsx` as a React Server Component: copyright line with podcast name and current year; minimal styling
 
 **Checkpoint**: Layout renders, header navigation works, and mock data is available — user story work can begin.
 
