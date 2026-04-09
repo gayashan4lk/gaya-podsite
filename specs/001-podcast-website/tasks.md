@@ -56,10 +56,10 @@ with title/snippet/date/duration, and a link to `/episodes`. Works on 375 px vie
 
 ### Implementation for User Story 1
 
-- [ ] T011 [P] [US1] Create `frontend/src/components/FeaturedEpisode.tsx` accepting `episode: Episode` prop: display episode number badge, cover image (with alt text = episode title), title, description snippet, publication date (human-readable), duration (`N min`), and an `<audio>` element using `episode.audioUrl`
-- [ ] T012 [P] [US1] Create `frontend/src/components/AudioPlayer.tsx` as `'use client'` component accepting `audioUrl: string` and `title: string`: renders a native `<audio controls>` element, fully keyboard-accessible with ARIA label `aria-label={title}`
-- [ ] T013 [US1] Create `frontend/src/app/page.tsx` (Home): import `podcast` and `episodes[0]`; render a full-width hero section (podcast name, tagline, cover image); render `<FeaturedEpisode episode={episodes[0]} />`; include a prominent "All Episodes" button linking to `/episodes`
-- [ ] T014 [US1] Style the Home page hero section in `frontend/src/app/page.tsx` using Tailwind: dark or gradient background, large bold typography, visually striking layout that stands out; ensure mobile-first responsive layout (stacks vertically on small screens, side-by-side on `md:` and up)
+- [x] T011 [P] [US1] Create `frontend/src/components/FeaturedEpisode.tsx` accepting `episode: Episode` prop: display episode number badge, cover image (with alt text = episode title), title, description snippet, publication date (human-readable), duration (`N min`), and an `<audio>` element using `episode.audioUrl`
+- [x] T012 [P] [US1] Create `frontend/src/components/AudioPlayer.tsx` as `'use client'` component accepting `audioUrl: string` and `title: string`: renders a native `<audio controls>` element, fully keyboard-accessible with ARIA label `aria-label={title}`
+- [x] T013 [US1] Create `frontend/src/app/page.tsx` (Home): import `podcast` and `episodes[0]`; render a full-width hero section (podcast name, tagline, cover image); render `<FeaturedEpisode episode={episodes[0]} />`; include a prominent "All Episodes" button linking to `/episodes`
+- [x] T014 [US1] Style the Home page hero section in `frontend/src/app/page.tsx` using Tailwind: dark or gradient background, large bold typography, visually striking layout that stands out; ensure mobile-first responsive layout (stacks vertically on small screens, side-by-side on `md:` and up)
 
 **Checkpoint**: Home page (`/`) fully functional — hero visible, featured episode displayed, navigation to `/episodes` works. Test on 375 px viewport.
 
