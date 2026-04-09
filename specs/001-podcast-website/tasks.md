@@ -74,9 +74,9 @@ first, readable on 375 px viewport. No Home page required.
 
 ### Implementation for User Story 2
 
-- [ ] T015 [P] [US2] Create `frontend/src/components/EpisodeCard.tsx` accepting `episode: Episode` prop: display episode number badge, cover image (alt = episode title), title, snippet, publication date (human-readable month + year), duration (`N min`); include `<AudioPlayer audioUrl={episode.audioUrl} title={episode.title} />`
-- [ ] T016 [US2] Create `frontend/src/app/episodes/page.tsx`: import full `episodes` array (already ordered newest-first); render page heading "All Episodes"; map over array rendering `<EpisodeCard>` for each episode
-- [ ] T017 [US2] Style the Episodes page in `frontend/src/app/episodes/page.tsx` using Tailwind: responsive grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`), consistent card spacing, clear visual hierarchy between episode number/title/meta
+- [x] T015 [P] [US2] Create `frontend/src/components/EpisodeCard.tsx` accepting `episode: Episode` prop: display episode number badge, cover image (alt = episode title), title, snippet, publication date (human-readable month + year), duration (`N min`); include `<AudioPlayer audioUrl={episode.audioUrl} title={episode.title} />`
+- [x] T016 [US2] Create `frontend/src/app/episodes/page.tsx`: import full `episodes` array (already ordered newest-first); render page heading "All Episodes"; map over array rendering `<EpisodeCard>` for each episode
+- [x] T017 [US2] Style the Episodes page in `frontend/src/app/episodes/page.tsx` using Tailwind: responsive grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`), consistent card spacing, clear visual hierarchy between episode number/title/meta
 
 **Checkpoint**: Episodes page (`/episodes`) shows all 20 cards, newest-first, responsive grid on all viewport sizes. Cards are scannable.
 
