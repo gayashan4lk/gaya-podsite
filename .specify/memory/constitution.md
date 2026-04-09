@@ -1,50 +1,77 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+==================
+Version change: (unversioned template) → 1.0.0
+Modified principles: N/A — initial ratification, all placeholders replaced
+Added sections:
+  - Core Principles (5 principles for a static web app)
+  - Technology Stack
+  - Development Workflow
+  - Governance
+Removed sections: N/A
+Templates checked:
+  - .specify/templates/plan-template.md  ✅ aligned (Constitution Check gate present)
+  - .specify/templates/spec-template.md  ✅ aligned (no constitution-specific constraints to add)
+  - .specify/templates/tasks-template.md ✅ aligned (tests marked optional, consistent with principle V)
+  - .specify/templates/commands/         ✅ skipped (directory does not exist)
+  - README.md                            ✅ skipped (does not exist yet)
+Deferred TODOs: none
+-->
+
+# Gaya Podsite Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Static-First
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+All pages MUST be pre-rendered to static HTML at build time.
+Client-side rendering is only permitted for interactive enhancements that cannot
+be achieved statically (e.g., audio playback controls, search).
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Simplicity
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+The tech stack MUST remain minimal. A dependency MUST NOT be added unless the
+problem cannot be reasonably solved without it. YAGNI applies to all decisions.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### III. Performance
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Every public page MUST meet Core Web Vitals thresholds (LCP ≤ 2.5 s, CLS ≤ 0.1)
+on a median mobile connection. Assets MUST be optimised before deployment.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### IV. Accessibility
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+All pages MUST meet WCAG 2.1 AA contrast and keyboard-navigation requirements.
+Interactive elements MUST carry appropriate ARIA labels.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### V. Deployability
+
+Deployment MUST be fully automated via CI/CD. No manual file uploads.
+The build process MUST complete without errors before any merge to `main`.
+
+## Technology Stack
+
+- **Rendering**: Static site generator Next.js static export.
+- **Styling**: Tailwind. No CSS-in-JS runtime.
+- **Hosting**: Netlify with automated deploy on push to `main`.
+- New tools MUST be documented in the relevant feature plan before adoption.
+
+## Development Workflow
+
+- Features MUST start with a spec and plan before code is written.
+- All work MUST be done on feature branches; direct commits to `main` are not
+  permitted except for hotfixes.
+- Each feature MUST pass a manual smoke test before merging.
+- All PRs MUST verify compliance with the five Core Principles before merging.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other conventions for this project.
+Amendments require a written rationale, a version bump, and propagation to any
+affected templates or guidance files.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Versioning policy**:
+- MAJOR: Removal or redefinition of an existing principle.
+- MINOR: New principle or section added.
+- PATCH: Clarifications, wording fixes, no semantic change.
+
+**Version**: 1.0.0 | **Ratified**: 2026-04-10 | **Last Amended**: 2026-04-10
